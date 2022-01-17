@@ -4,7 +4,6 @@ import NextLink from 'next/link';
 import {
   AppBar,
   Container,
-  createMuiTheme,
   CssBaseline,
   Link,
   Switch,
@@ -12,7 +11,7 @@ import {
   Toolbar,
   Typography,
 } from '@material-ui/core';
-
+import { createTheme } from '@material-ui/core/styles';
 import useStyles from '../utils/styles';
 import { Store } from '../utils/store';
 import Cookies from 'js-cookie';
@@ -20,7 +19,7 @@ import Cookies from 'js-cookie';
 export default function Layout({ title, description, children }) {
   const { state, dispatch } = useContext(Store);
   const { darkMode } = state;
-  const theme = createMuiTheme({
+  const theme = createTheme({
     typography: {
       h1: {
         fontSize: '1.6rem',

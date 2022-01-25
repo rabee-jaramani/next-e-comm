@@ -2,9 +2,9 @@ import { makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles({
   navbar: {
-    backgroundColor: '#202050',
+    backgroundColor: '#203040',
     '& a': {
-      color: '#fff',
+      color: '#ffffff',
       marginLeft: 10,
     },
   },
@@ -23,8 +23,16 @@ const useStyles = makeStyles({
     textAlign: 'center',
   },
   section: {
-    marginBottom: 10,
     marginTop: 10,
+    marginBottom: 10,
+  },
+  form: {
+    maxWidth: 800,
+    margin: '0 auto',
+  },
+  navbarButton: {
+    color: '#fff',
+    textTransform: 'intial',
   },
 });
 export default useStyles;

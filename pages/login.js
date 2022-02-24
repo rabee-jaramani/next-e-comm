@@ -31,6 +31,7 @@ export default function Login() {
   const { userInfo } = state;
   useEffect(() => {
     if (userInfo) {
+      console.log('FROM LOG in| USER INFO IS>> ', userInfo);
       router.push('/');
     }
   }, []);

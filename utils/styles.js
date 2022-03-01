@@ -45,10 +45,10 @@ const useStyles = makeStyles({
     width: '100%',
   },
   warning: {
-    color: '#f13535',
+    color: '#d23535',
   },
   green: {
-    color: '#4bda39',
+    color: '#6ec463',
   },
 });
 export default useStyles;

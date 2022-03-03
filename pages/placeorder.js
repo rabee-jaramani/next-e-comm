@@ -27,7 +27,6 @@ import CheckoutWizard from '../components/CheckoutWizard';
 import { useSnackbar } from 'notistack';
 import { getError } from '../utils/error';
 import Cookies from 'js-cookie';
-import { route } from 'next/dist/next-server/server/router';
 function PlaceOrder() {
   const classes = useStyles();
   const router = useRouter();

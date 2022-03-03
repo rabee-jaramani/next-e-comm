@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useReducer, useState } from 'react';
+import React, { useContext, useEffect, useReducer } from 'react';
 import dynamic from 'next/dynamic';
 import Layout from '../../components/Layout';
 import { Store } from '../../utils/Store';
@@ -18,7 +18,6 @@ import {
   List,
   ListItem,
   CircularProgress,
-  AccordionActions,
   Button,
 } from '@material-ui/core';
 import axios from 'axios';
@@ -135,7 +134,7 @@ function Order({ params }) {
       loadPaypalScript();
     }
   }, [order, successPay, successDeliver]);
-  const { closeSnackbar, enqueueSnackbar } = useSnackbar();
+  const { enqueueSnackbar } = useSnackbar();
 
   function createOrder(data, actions) {
     return actions.order

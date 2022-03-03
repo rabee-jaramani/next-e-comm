@@ -9,7 +9,7 @@ import {
   Typography,
 } from '@material-ui/core';
 import Cookies from 'js-cookie';
-import router, { Router, useRouter } from 'next/router';
+import { useRouter } from 'next/router';
 import { useSnackbar } from 'notistack';
 import React, { useContext, useEffect, useState } from 'react';
 import CheckoutWizard from '../components/checkoutWizard';

@@ -172,7 +172,7 @@ function Profile() {
                             variant="outlined"
                             fullWidth
                             id="password"
-                            label="Password"
+                            label="New Password"
                             inputProps={{ type: 'password' }}
                             error={Boolean(errors.password)}
                             helperText={
@@ -201,7 +201,7 @@ function Profile() {
                             variant="outlined"
                             fullWidth
                             id="confirmPassword"
-                            label="Confirm Password"
+                            label="Confirm New Password"
                             inputProps={{ type: 'password' }}
                             error={Boolean(errors.confirmPassword)}
                             helperText={

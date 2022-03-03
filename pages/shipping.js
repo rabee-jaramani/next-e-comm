@@ -13,7 +13,7 @@ import { useRouter } from 'next/dist/client/router';
 import Cookies from 'js-cookie';
 import { useContext } from 'react';
 import { Controller, useForm } from 'react-hook-form';
-import CheckoutWizard from '../components/CheckoutWizard';
+import CheckoutWizard1 from '../components/CheckoutWizard1';
 
 export default function Shipping() {
   const {
@@ -37,7 +37,7 @@ export default function Shipping() {
     setValue('city', shippingAddress.city);
     setValue('postalCode', shippingAddress.postalCode);
     setValue('country', shippingAddress.country);
-  }, []);
+  }, [router, setValue, shippingAddress, userInfo]);
 
   const classes = useStyles();
   const submitHandler = ({ fullName, address, city, postalCode, country }) => {
@@ -53,7 +53,7 @@ export default function Shipping() {
   };
   return (
     <Layout title="Shipping Address">
-      <CheckoutWizard activeStep={1} />
+      <CheckoutWizard1 activeStep={1} />
       <form onSubmit={handleSubmit(submitHandler)} className={classes.form}>
         <Typography component="h1" variant="h1">
           Shipping Address

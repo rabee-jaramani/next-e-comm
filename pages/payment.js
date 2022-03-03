@@ -12,7 +12,7 @@ import Cookies from 'js-cookie';
 import { useRouter } from 'next/router';
 import { useSnackbar } from 'notistack';
 import React, { useContext, useEffect, useState } from 'react';
-import CheckoutWizard from '../components/checkoutWizard';
+import CheckoutWizard1 from '../components/CheckoutWizard1';
 import Layout from '../components/Layout';
 import { Store } from '../utils/Store';
 import useStyles from '../utils/styles';
@@ -32,7 +32,7 @@ export default function Payment() {
     } else {
       setPaymentMethod(Cookies.get('paymentMethod') || '');
     }
-  }, []);
+  }, [router, shippingAddress.address]);
   const submitHandler = (e) => {
     e.preventDefault();
     if (!paymentMethod) {
@@ -45,7 +45,7 @@ export default function Payment() {
   };
   return (
     <Layout title="Payment Method">
-      <CheckoutWizard activeStep={2}></CheckoutWizard>
+      <CheckoutWizard1 activeStep={2} />
       <form className={classes.form} onSubmit={submitHandler}>
         <Typography component="h1" varient="h1">
           Payment Method

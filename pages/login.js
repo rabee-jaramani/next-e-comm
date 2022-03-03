@@ -34,7 +34,7 @@ export default function Login() {
       console.log('FROM LOG in| USER INFO IS>> ', userInfo);
       router.push('/');
     }
-  }, []);
+  }, [router, userInfo]);
 
   const classes = useStyles();
   const submitHandler = async ({ email, password }) => {

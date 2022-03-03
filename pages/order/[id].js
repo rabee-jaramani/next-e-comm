@@ -133,7 +133,15 @@ function Order({ params }) {
       };
       loadPaypalScript();
     }
-  }, [order, successPay, successDeliver]);
+  }, [
+    order,
+    successPay,
+    successDeliver,
+    orderId,
+    paypalDispatch,
+    router,
+    userInfo,
+  ]);
   const { enqueueSnackbar } = useSnackbar();
 
   function createOrder(data, actions) {

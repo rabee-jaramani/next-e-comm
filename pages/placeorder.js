@@ -23,7 +23,7 @@ import {
 import axios from 'axios';
 import { useRouter } from 'next/router';
 import useStyles from '../utils/styles';
-import CheckoutWizard from '../components/CheckoutWizard';
+import CheckoutWizard1 from '../components/CheckoutWizard1';
 import { useSnackbar } from 'notistack';
 import { getError } from '../utils/error';
 import Cookies from 'js-cookie';
@@ -52,7 +52,7 @@ function PlaceOrder() {
     if (cartItems.length < 1) {
       router.push('/cart');
     }
-  }, []);
+  }, [cartItems, paymentMethod, router]);
   const { closeSnackbar, enqueueSnackbar } = useSnackbar();
   const [loading, setLoading] = useState(false);
   const placeOrderHandler = async () => {
@@ -87,7 +87,7 @@ function PlaceOrder() {
   };
   return (
     <Layout title="Shopping Cart">
-      <CheckoutWizard activeStep={3}></CheckoutWizard>
+      <CheckoutWizard1 activeStep={3} />
       <Typography component="h1" variant="h1">
         Place Order
       </Typography>

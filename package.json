@@ -10,11 +10,13 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.11.4",
+    "@material-ui/lab": "^4.0.0-alpha.60",
     "@paypal/react-paypal-js": "^7.6.0",
     "axios": "^0.21.1",
     "bcryptjs": "^2.4.3",
     "chart.js": "^3.7.1",
     "cloudinary": "^1.28.1",
+    "eslint-plugin-react-hooks": "^4.2.1-rc.1-next-cb1e7b1c6-20220303",
     "js-cookie": "^2.2.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.13.2",

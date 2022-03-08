@@ -11,7 +11,6 @@ import { Store } from '../utils/Store';
 import ProductItem from '../components/ProductItem';
 import Carousel from 'react-material-ui-carousel';
 import useStyles from '../utils/styles';
-import { Image } from '@material-ui/icons';
 export default function Home(props) {
   const router = useRouter();
   const { state, dispatch } = useContext(Store);

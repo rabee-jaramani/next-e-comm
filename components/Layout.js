@@ -41,7 +41,6 @@ export default function Layout({ title, description, children }) {
   const { userInfo } = state;
   const [fetchCategories_fetched, setFetchCategories_fetched] = useState(false);
   const { darkMode, cart } = state;
-  console.log('USER INFO' + userInfo);
   const theme = createTheme({
     typography: {
       h1: {
@@ -123,7 +122,7 @@ export default function Layout({ title, description, children }) {
     router.push('/');
   };
   return (
-    <div>
+    <>
       <Head>
         <title>{title ? `${title} - Next Amazona` : 'Next Amazona'}</title>
         {description && <meta name="description" content={description}></meta>}
@@ -280,6 +279,6 @@ export default function Layout({ title, description, children }) {
           <Typography>All rights reserved. Next Amazona.</Typography>
         </footer>
       </ThemeProvider>
-    </div>
+    </>
   );
 }

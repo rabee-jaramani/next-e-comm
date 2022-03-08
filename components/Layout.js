@@ -7,7 +7,6 @@ import {
   Typography,
   Container,
   Link,
-  createMuiTheme,
   ThemeProvider,
   CssBaseline,
   Switch,
@@ -31,10 +30,10 @@ import useStyles from '../utils/styles';
 import { Store } from '../utils/Store';
 import { getError } from '../utils/error';
 import Cookies from 'js-cookie';
-import router, { useRouter } from 'next/router';
+import { useRouter } from 'next/router';
 import { useSnackbar } from 'notistack';
 import axios from 'axios';
-import { useEffect } from 'react';
+import { createTheme } from '@material-ui/core/styles';
 
 export default function Layout({ title, description, children }) {
   const router = useRouter();
@@ -43,7 +42,7 @@ export default function Layout({ title, description, children }) {
   const [fetchCategories_fetched, setFetchCategories_fetched] = useState(false);
   const { darkMode, cart } = state;
   console.log('USER INFO' + userInfo);
-  const theme = createMuiTheme({
+  const theme = createTheme({
     typography: {
       h1: {
         fontSize: '1.6rem',
@@ -98,9 +97,7 @@ export default function Layout({ title, description, children }) {
     setFetchCategories_fetched(true);
     fetchCategories();
   }
-  // useEffect(() => {
 
-  // }, []);
   const darkModeChangeHandler = () => {
     dispatch({ type: darkMode ? 'DARK_MODE_OFF' : 'DARK_MODE_ON' });
     const newDarkMode = !darkMode;
